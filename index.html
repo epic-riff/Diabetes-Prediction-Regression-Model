@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diabetes Change Cal</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Diabetes Change Calculator</h1>
+            <p>Enter info below to find how likely it is that you'll get diabetes</p>
+        </div>
+        <br>
+        <div class="input">
+            <form action="{{ url_for('predection')}}" method="post">
+                <label>Gender:</label><br>
+                <input type="radio" id="m" name="bin" value=1>
+                <label for="m">Male</label><br>                
+                <input type="radio" id="f" name="bin" value=0>
+                <label for="f">Female</label><br>                
+                <input type="radio" id="o" name="bin" value=2>
+                <label for="o">Other</label><br>
+                <br>
+                <label for="age">Age:</label><br>
+                <input type="text" id="age" name="age"><br>
+                <br>   
+                <label>Do you have hypertension?</label><br>
+                <input type="radio" id="hy" name="ht" value=1>
+                <label for="hy">Yes</label><br>                
+                <input type="radio" id="hn" name="ht" value=0>
+                <label for="hn">No</label><br>
+                <br>                  
+                <label>Do you have any heart diseases?:</label><br>
+                <input type="radio" id="hdy" name="hd" value=1>
+                <label for="hdy">Yes</label><br>                
+                <input type="radio" id="hdn" name="hd" value=0>
+                <label for="hdn">No</label><br>
+                <br>                 
+                <label for="bmi">BMI:</label><br>
+                <input type="text" id="bmi" name="bmi"><br>  
+                <br>              
+                <label for="bml">Blood Glucose Level:</label><br>
+                <input type="text" id="bml" name="bml"><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <br>
+        <div class="header">
+            <h1>{{ predection }}</h1>
+        </div>
+    </body>
+</html>
