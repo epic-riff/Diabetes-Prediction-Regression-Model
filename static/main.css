@@ -1,1 +1,19 @@
+body {
+    background-color: rgb(226, 185, 73);
+}
 
+div.header {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+    color: rgb(12, 105, 105);
+}
+
+div.input {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1px;
+    color: rgb(29, 92, 92);
+}
