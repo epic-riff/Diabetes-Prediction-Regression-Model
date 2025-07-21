@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import pickle
 import numpy as np
 
@@ -23,7 +23,10 @@ def home():
 @app.route('/predection', methods=['GET', 'POST'])
 def predection():
     if request.method == 'POST':
-        X = [int(request.values.get('bin')), int(request.values.get('age')), int(request.values.get('ht')), int(request.values.get('hd')), int(request.values.get('bmi')), int(request.values.get('bml'))]
+        try:
+            X = [int(request.values.get('bin')), int(request.values.get('age')), int(request.values.get('ht')), int(request.values.get('hd')), int(request.values.get('bmi')), int(request.values.get('bml'))]
+        except TypeError:
+            return redirect(url_for('home'))
         pred = lrprob(model, X)
         return render_template('index.html', predection=pred)
     return render_template('index.html', predection="Form Failed, Please Try Again")
