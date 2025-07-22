@@ -5,4 +5,6 @@ Diabetes is a chronic disease where the body doesn't produce enough insulin, and
 
 This project uses a logistic regression model created using the Scikit-Learn framework to predict the chance that a person can get or has diabetes. This is paired with a Flask backend script that allows people to see their chances of getting diabetes. The link to the website is: https://diabetes-prediction-regression-model.onrender.com
 
+You can find a more in depth explation for the project in the documentation pdf found within the repo. 
+
 The dataset used to create the model is: https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset
